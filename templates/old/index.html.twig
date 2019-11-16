@@ -1,0 +1,84 @@
+<h1>{{ curso }}</h1>
+<h2>Template feito com Twig</h2>
+<h3>Ola {{ user }}</h3>
+
+<h3>Dados do post</h3>
+Titulo: {{ post.titulo }}<br>
+Conteudo: {{ post.conteudo }}<br>
+Data: {{ post.data }}<br>
+
+
+
+<div>
+    <hr>
+    {{ curso|upper }}<br>
+    {% for numero in numeros|sort %}
+        {{ numero }}
+    {% endfor %}<br>
+    {{ "antonio abrantes"|capitalize }}<br>
+    {{ ("Antonio" ~ "Abrantes")|title }}<br><br>
+    {{ posts|json_encode }}
+</div>
+
+<div>
+    <hr>
+    {{ max(numeros) }}<br>
+    {% for i in range(0,5) %}
+        {{ i }}
+    {% endfor %}<br>
+    {{ dump(posts) }}
+</div>
+
+<div>
+    <hr>
+    {% set titulo = 'Minha variavel twig' %}
+    {% set tags = [1, 2, 3] %}
+    {% set categoria = {'frontend': 'Js'} %}
+    {{ titulo }}<br>
+    {{ categoria.frontend }}
+
+</div>
+
+<div>
+    <hr>
+    {{ "Antonio " ~ "Abrantes" }}<br>
+    {% if 4 in numeros %}
+        <p>Pertence a este array!</p>
+    {% endif %}
+
+    {% if curso starts with 'C' %}
+        <p>Termina!!</p>
+    {% endif %}
+
+
+    <hr>
+    {% for num in numeros if num >= 4 %}
+        numero: {{ num }}<br>
+    {% else %}
+        <p>Nenhum item encontrado</p>
+    {% endfor %}
+
+    <hr>
+    <h3>Dados dos posts</h3>
+    {% for _post in posts %}
+        <p>
+            Nº do post: {{ loop.index }}<br>
+            Titulo: {{ _post.titulo }}<br>
+            Conteudo: {{ _post.conteudo }}<br>
+            Data: {{ _post.data }}
+        </p>
+    {% endfor %}
+
+
+    <hr>
+    {# Comentario #}
+
+    {% if curso == 'Curso de Twi' %}
+        <p>Estou no {{ curso }}</p>
+    {% elseif curso == 'Outro' %}
+        <p>Outro curso</p>
+    {% else %}
+        <p>Outro curso</p>
+    {% endif %}
+
+</div>

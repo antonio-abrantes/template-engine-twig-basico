@@ -1,0 +1,14 @@
+<div class="post-preview">
+    <a href="{{ url('posts.show') }}">
+        <h2 class="post-title">
+            Video {{ post.titulo }}
+        </h2>
+        <h3 class="post-subtitle">
+            {{ post.conteudo }}
+        </h3>
+    </a>
+    <p class="post-meta">Posted by {{ user }}
+        in
+        {{ post.data }}</p>
+</div>
+<hr>
