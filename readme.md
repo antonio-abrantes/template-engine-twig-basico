@@ -13,3 +13,8 @@
         </ul>
     </li>
 </ul>
+<h2>Aplicação de demonstração</h2>
+<ul>
+    <li>LINK: <a href="https://blog-twig.herokuapp.com/" target="_blank">https://blog-twig.herokuapp.com/</a></li>
+    <li>Plataforma de hospedagem:<a href="https://www.heroku.com/" target="_blank">https://www.heroku.com/</a></li>
+</ul>

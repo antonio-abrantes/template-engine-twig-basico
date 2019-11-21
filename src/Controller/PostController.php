@@ -25,7 +25,7 @@ class PostController extends AbstractController
 
 
     /**
-     * @Route("/post", name="posts.index")
+     * @Route("/", name="posts.index")
      */
     public function index(Twig_Environment $twig){
 
